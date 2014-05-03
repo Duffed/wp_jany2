@@ -10,7 +10,7 @@ Author URI: Your website address.
 /*
 Farben:
 	Akzent1 = #649c77
-	hellgrau = lightgrey
+	hellgrau = #aaa
 	schwarz = black
 	grau = grey
 */
@@ -115,7 +115,7 @@ blockquote {
 	margin:10px 0;
 	padding-left: 10px;
 	font-style: italic;
-	border-left: 1px dashed lightgrey
+	border-left: 1px dashed #aaa
 }
 
 /* Styling inside actual-content */
@@ -235,7 +235,7 @@ nav {
 		min-width: 755px;
 		margin:0;
 		top:0px;
-		border-bottom:1px solid lightgrey;
+		border-bottom:1px solid #aaa;
 		border-top:none;
 		background:#fff;
 	}
@@ -356,7 +356,7 @@ ul#searchresults_list li {
 	margin-bottom: 2rem;
 	padding-bottom: 2rem;
 	position: relative;
-	border-bottom: 1px solid lightgrey;
+	border-bottom: 1px solid #aaa;
 }
 ul#searchresults_list li span {
 	float: left;
@@ -394,7 +394,7 @@ article.content {
 }
 
 .blogposts {
-	border-bottom:1px solid lightgrey;
+	border-bottom:1px solid #aaa;
 }
 
 .article_subtitle_container {
@@ -406,7 +406,7 @@ article.content {
 article.content span.article_subtitle_date,
 article.content span.article_subtitle_fulldate,
 article.content span.article_subtitle_comments a{
-	color:lightgrey;
+	color:#aaa;
 	font-size: 0.8rem;
 	line-height: 160%;
 	font-family: "Raleway";
@@ -528,7 +528,7 @@ div.wp-caption img {
 	font-size: .8rem;
 	margin-top:2.2rem;
 	padding:.7rem 0;
-	border-top:1px dotted lightgrey;
+	border-top:1px dotted #aaa;
 	line-height: 1.5rem
 }
 /* Tags */
@@ -580,7 +580,7 @@ a.more-link:hover {
 	.recipe {
 		padding-left: 1.5rem;
 		margin:2rem 0 1rem 1rem;
-		border-left:1px dotted lightgrey;
+		border-left:1px dotted #aaa;
 		font-family: "Courier New"
 	}
 	.recipe h2,
@@ -610,11 +610,11 @@ a.more-link:hover {
 		font-size: 1.2rem;
 		font-weight: bold;
 		margin-bottom: 0rem;
-		border-bottom: 1px solid lightgrey
+		border-bottom: 1px solid #aaa
 	}
 	.recipe ul li {
 		margin:0;
-		border-bottom: 1px solid lightgrey
+		border-bottom: 1px solid #aaa
 	}
 	.recipe ul li:hover {
 		color: #649c77
@@ -726,7 +726,7 @@ a.more-link:hover {
 
 /* Footer */
 footer {
-	border-top: 1px solid lightgrey;
+	border-top: 1px solid #aaa;
 	padding: .5rem 0;
 	clear:both;
 	margin-top:3rem;
@@ -737,7 +737,7 @@ footer {
 	list-style-type: none;
 	margin-bottom:3rem;
 	padding-bottom:1rem;
-	border-bottom:1px solid lightgrey;
+	border-bottom:1px solid #aaa;
 }
 #comments .comment-body {
 	margin-bottom: 2rem;
@@ -772,7 +772,7 @@ li.bypostauthor div.comment-body {
 
 #comments .comment .comment-author {
 	font-family: "Raleway";
-	border-bottom:1px dashed lightgrey;
+	border-bottom:1px dashed #aaa;
 	padding-bottom:.3rem;
 	margin-bottom:.1rem;
 	font-weight: bold;
@@ -782,7 +782,7 @@ li.bypostauthor div.comment-body {
 	border-radius: 25px;
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
-	background:lightgrey;
+	background:#aaa;
 	padding:2px;
 	position: absolute;
 	top:1rem;
@@ -799,7 +799,7 @@ li.bypostauthor div.comment-body {
 	padding:5px;
 	border-radius: 5px;
 	font-size: .7rem;
-	background:lightgrey;
+	background:#aaa;
 	margin-top:.5rem;
 	display: inline-block;
 	font-family: "Raleway";
@@ -851,7 +851,7 @@ li.bypostauthor div.comment-body {
 #comment_form  #reply-title #cancel-comment-reply-link {
 	display: block;
 	font-style: normal;
-	color: lightgrey;
+	color: #aaa;
 	font-size: .8rem
 }
 #comment_form  #reply-title #cancel-comment-reply-link:hover {
@@ -871,7 +871,7 @@ li.bypostauthor div.comment-body {
 	width:100%;
 	margin-bottom: .5rem;
 	padding: .5rem;
-	border:1px dashed lightgrey;
+	border:1px dashed #aaa;
 	font-family: "Open Sans"
 }
 #commentform input:focus,
@@ -883,7 +883,7 @@ li.bypostauthor div.comment-body {
 	padding:5px;
 	border-radius: 5px;
 	font-size: .9rem;
-	background:lightgrey;
+	background:#aaa;
 	margin-top:.5rem;
 	font-family: "Raleway";
 	width: auto;
@@ -902,7 +902,7 @@ h2.search-title {
 
 .search-headline {
 	padding: .5rem 2rem .5rem 2rem;
-	background: lightgrey;
+	background: #aaa;
 	margin-left: -2rem;
 	position: static;
 	display: inline-block;
@@ -961,14 +961,14 @@ h2.search-title {
 	#comment_form {
 		margin-bottom: 3rem;
 		padding: 1rem 1rem 3rem 1rem;
-		border-bottom: 1px solid lightgrey;
+		border-bottom: 1px solid #aaa;
 		clear: both;
 	}
 	.pageborder {
-		border-bottom: 1px solid lightgrey
+		border-bottom: 1px solid #aaa
 	}
 	a.more-link {
-		color:lightgrey;
+		color:#aaa;
 	}
 	a.more-link:hover {
 		color: black;
