@@ -3,7 +3,7 @@
 				<!-- Left (Blog entrys)-->
 				<div class="wrapper2">
 				<div class="left-container">
-					<h2 class="first_headline">Kategorie: <span class="hightlight"><?php echo $_GET["s"]?></span>:</h2>
+					<h2 class="first_headline">Kategorie: <span class="hightlight"><?php single_cat_title( '', true ); ?></span></h2>
 					
 					<?php if (have_posts()) : ?>
 						<ul id="searchresults_list" class="clearfix">

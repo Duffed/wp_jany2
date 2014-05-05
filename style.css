@@ -57,7 +57,7 @@ body {
 	display: table;
 	clear: both;
 }
-
+.displaymobile {display: none}
 .left, .alignleft { float: left}
 .right, .alignright { float: right}
 .alignleft { margin-right:1rem;}
@@ -201,6 +201,8 @@ header {
 	padding:2rem 0 ;
 	background: url(images/header-big.png) top center no-repeat;
 	height:250px;
+	text-indent: -9999px;
+	white-space: nowrap;
 }
 header a, header a:active, header a:focus, header a:visited {
 	margin:0;
@@ -219,46 +221,67 @@ header.topfixed {
 
 
 /* Nav */
-nav {
-	margin:auto;
-	margin-bottom: 3rem;
-	width: 100%;
-	height:2.2rem;
-	border-bottom: 1px dotted #649c77;
-	position: relative;
-}
-@media handheld, only screen and (min-width: 767px) {
-	nav.topfixed {
-		position: fixed;
-		width: 100%;
-		max-width: 896px;
-		min-width: 755px;
-		margin:0;
-		top:0px;
-		border-bottom:1px solid #aaa;
-		border-top:none;
-		background:#fff;
-	}
-}
-nav ul {
+#nav_button {
 	text-align: center;
-	list-style-type: none;
+	margin:auto;
+	cursor: pointer;
+	margin:1rem 0;
 }
-nav ul li{
-	display: inline-block;
-	padding:.5rem 1rem 1rem 1rem;
-}
-nav ul a, nav ul a:focus, nav ul a:visited, #hidden_menu {
-	font-family: "Raleway";
-	font-size: .8rem;
-	color:#aaa;
-}
-nav ul a:hover, nav ul li:hover{
+#nav_button:before {
+	content: "\f0c9 ";
+	font-family: "FontAwesome";
 	color: #649c77;
+	margin-right: 5px;
 }
-nav ul li.current_page_itrem a {
-	color: #649c77;
+nav {
+	border-bottom: 1px dotted #649c77;
+	margin-bottom: 3rem;
+	padding-bottom: 1rem
 }
+	nav ul {
+		text-align: center;
+		list-style-type: none;
+		position: relative;
+	}
+	nav ul li{
+		display:inline-block;
+	}
+	nav a, nav a:focus, nav a:visited, #hidden_menu {
+		font-family: "Raleway";
+		font-size: .8rem;
+		color:#aaa;
+		padding:.5rem 1rem 1rem 1rem;
+	}
+	nav a:hover, nav li:hover{
+		color: #649c77;
+	}
+	nav li.current_page_item a {
+		color: #649c77;
+	}
+	nav ul li ul{
+		display: inline;
+		visibility: hidden;
+		position: absolute;
+		padding:0;
+		top:2rem;
+		background:white;
+		border: 1px dotted #649c77;
+		z-index: 999999999999999
+	}
+	nav ul li ul li{
+		display: block;
+		margin:1rem 0;
+	}
+	nav ul li:hover > ul {
+   		visibility: visible;
+	}
+	nav ul li.menu-item-has-children > a:after{
+		content: "\f107";
+		font-family: "FontAwesome";
+		color: #649c77;
+		margin-left: 5px
+	}
+
 select {
 	background: none;
 	border-radius: 0px;
@@ -310,15 +333,13 @@ aside.right-container {
 	width: 24%;
 	float: right;
 	opacity: .75;
-	transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
 	-webkit-transition: opacity .25s ease-in-out;
+	transition: opacity .25s ease-in-out;
 }
 aside.right-container:hover {
 	opacity: 1;
-	transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
 	-webkit-transition: opacity .25s ease-in-out;
+	transition: opacity .25s ease-in-out;
 }
 
 #searchform, .search-form {
@@ -560,6 +581,7 @@ a.more-link {
 	color:transparent;
 	font-size: .8rem;
 	position: relative;
+	-webkit-transition: .2s ease-in-out;
 	transition: .2s ease-in-out;
 }
 a.more-link:after {
@@ -573,6 +595,7 @@ a.more-link:after {
 }
 a.more-link:hover {
 	color:black;
+	-webkit-transition: .5s ease-in-out;
 	transition: .5s ease-in-out;
 }
 
@@ -722,7 +745,6 @@ a.more-link:hover {
 	font-size: .8rem;
 	text-align: justify;
 }
-
 
 /* Footer */
 footer {
@@ -924,6 +946,8 @@ h2.search-title {
 
 /* Media */
 @media handheld, only screen and (max-width: 767px) {
+	.displaynone {display:none}
+	.displaymobile {display: block}
 	div.left-container, aside.right-container, .wrapper  {
 		width: 100%;
 		min-width: 0;
@@ -939,7 +963,7 @@ h2.search-title {
 		margin:0 auto;
 	}
 	html {
-		font-size: 85%
+		font-size: 95%
 	}
 	header {
 		background: url(images/header-small.png) center center no-repeat;
@@ -975,7 +999,41 @@ h2.search-title {
 	}
 	nav {
 		border:none;
+		line-height: 1.2rem;
 	}
+		nav ul li {
+			padding:0;
+			margin-bottom: .5rem;
+			display: block;
+			text-align: center;
+		}
+		nav ul li a {
+			height:2rem;
+			font-size: 1.2rem;
+			line-height: 1.2rem;
+			background: #eee;
+			display: block;
+		}
+		/*ul ul*/
+		nav ul li ul{
+			display: block;
+			visibility: visible;
+			position:static;
+			padding-left:20px;
+			background:none;
+			border:none;
+			border-left:1px solid #649c77;;
+		}
+		nav ul li ul li {
+			display: block;
+			margin:0 0 .5rem 0;
+		}
+		nav ul li ul li:first-child {
+			margin-top: .5rem;
+		}
+		nav ul li:hover > ul {
+	   		visibility: visible;
+		}
 	.alignright, 
 	.alignleft {
 		width: 100% !important;
