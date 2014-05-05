@@ -38,7 +38,8 @@
 
 			//toggle
 			$("#nav_button").click(function(){
-				$("nav ul").slideToggle("fast");
+				$("nav ul").toggle();
+				// $("nav ul").slideToggle("fast");
 				$("#nav_button").toggleClass("active");
 			});
 

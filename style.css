@@ -225,7 +225,12 @@ header.topfixed {
 	text-align: center;
 	margin:auto;
 	cursor: pointer;
-	margin:1rem 0;
+	padding:.4rem;
+	margin:0;
+	background: #eee;
+}
+#nav_button.active {
+	color:#649c77;
 }
 #nav_button:before {
 	content: "\f0c9 ";
@@ -1001,6 +1006,12 @@ h2.search-title {
 		border:none;
 		line-height: 1.2rem;
 	}
+		nav ul li:first-child {
+			margin-top: .8rem;
+		}
+		nav ul li:last-child {
+			margin:0;
+		}
 		nav ul li {
 			padding:0;
 			margin-bottom: .5rem;
