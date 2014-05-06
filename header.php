@@ -31,7 +31,7 @@
 		// }
 		// );
 
-		// Navigation
+		// jquery
 		$(document).ready(function(){
 			//hide menu 
 			$("nav ul").addClass("displaynone");
@@ -49,9 +49,29 @@
 					$("nav ul").removeAttr("style");
 				}
 			});
+
+			//Scroll to anker 
+//				$('a[href*=#]:not([href=#])').bind('click', function(e) {
+//					e.preventDefault(); //prevent the "normal" behaviour which would be a "hard" jump
+
+//					var target = $(this).attr("href"); //Get the target
+
+					// perform animated scrolling by getting top-position of target-element and set it as scroll target
+//					$('html, body').stop().animate({ scrollTop: $(target).offset().top }, 2000, function() {
+//						location.hash = target;  //attach the hash (#jumptarget) to the pageurl
+//					});
+//
+				//	return false;
+				//});
+
+
+			// Back To Top
+			$('a.top').click(function(){
+				$('body').animate({scrollTop : 0},400);
+				return false
+			});
 		});
 	</script>
-
 
 </head>
 

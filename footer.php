@@ -5,7 +5,9 @@
 					</div>
 				</footer>
 			</div>
+			<a class="top" href="#" title="Nach oben scrollen"></a> 
 		</div>
+
 		<?php wp_footer();?>
 	</body>
 </html>

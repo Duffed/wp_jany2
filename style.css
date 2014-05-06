@@ -90,6 +90,9 @@ code {
 }
 .first_headline {
 	margin-top: 0;
+	border-bottom:1px solid lightgrey;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem
 }
 i.icon {
 	font-family: "FontAwesome";
@@ -115,7 +118,7 @@ blockquote {
 	margin:10px 0;
 	padding-left: 10px;
 	font-style: italic;
-	border-left: 1px dashed #aaa
+	border-left: 1px dashed lightgrey
 }
 
 /* Styling inside actual-content */
@@ -233,15 +236,19 @@ header.topfixed {
 	color:#649c77;
 }
 #nav_button:before {
-	content: "\f0c9 ";
+	content: "\f0c9";
 	font-family: "FontAwesome";
 	color: #649c77;
 	margin-right: 5px;
 }
+#nav_button.active:before {
+	
+}
 nav {
 	border-bottom: 1px dotted #649c77;
 	margin-bottom: 3rem;
-	padding-bottom: 1rem
+	padding-bottom: .5rem;
+	margin-top: 2rem
 }
 	nav ul {
 		text-align: center;
@@ -264,21 +271,20 @@ nav {
 		color: #649c77;
 	}
 	nav ul li ul{
-		display: inline;
-		visibility: hidden;
+		display: none;
 		position: absolute;
 		padding:0;
 		top:2rem;
-		background:white;
+		background:#fff;
 		border: 1px dotted #649c77;
-		z-index: 999999999999999
+		z-index: 9999999;
 	}
 	nav ul li ul li{
 		display: block;
 		margin:1rem 0;
 	}
 	nav ul li:hover > ul {
-   		visibility: visible;
+		display: inline;
 	}
 	nav ul li.menu-item-has-children > a:after{
 		content: "\f107";
@@ -382,7 +388,7 @@ ul#searchresults_list li {
 	margin-bottom: 2rem;
 	padding-bottom: 2rem;
 	position: relative;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid lightgrey;
 }
 ul#searchresults_list li span {
 	float: left;
@@ -420,7 +426,7 @@ article.content {
 }
 
 .blogposts {
-	border-bottom:1px solid #aaa;
+	border-bottom:1px solid lightgrey;
 }
 
 .article_subtitle_container {
@@ -554,7 +560,7 @@ div.wp-caption img {
 	font-size: .8rem;
 	margin-top:2.2rem;
 	padding:.7rem 0;
-	border-top:1px dotted #aaa;
+	border-top:1px dotted lightgrey;
 	line-height: 1.5rem
 }
 /* Tags */
@@ -753,7 +759,7 @@ a.more-link:hover {
 
 /* Footer */
 footer {
-	border-top: 1px solid #aaa;
+	border-top: 1px solid lightgrey;
 	padding: .5rem 0;
 	clear:both;
 	margin-top:3rem;
@@ -764,7 +770,7 @@ footer {
 	list-style-type: none;
 	margin-bottom:3rem;
 	padding-bottom:1rem;
-	border-bottom:1px solid #aaa;
+	border-bottom:1px solid lightgrey;
 }
 #comments .comment-body {
 	margin-bottom: 2rem;
@@ -826,7 +832,7 @@ li.bypostauthor div.comment-body {
 	padding:5px;
 	border-radius: 5px;
 	font-size: .7rem;
-	background:#aaa;
+	background:lightgrey;
 	margin-top:.5rem;
 	display: inline-block;
 	font-family: "Raleway";
@@ -910,11 +916,12 @@ li.bypostauthor div.comment-body {
 	padding:5px;
 	border-radius: 5px;
 	font-size: .9rem;
-	background:#aaa;
+	background:lightgrey;
 	margin-top:.5rem;
 	font-family: "Raleway";
 	width: auto;
 	cursor: pointer;
+	border:none;
 }
 #commentform #submit:hover {
 	border-color:transparent;
@@ -948,6 +955,16 @@ h2.search-title {
 	border-width: 10px 10px 0 0;
 	border-color: #7d7d7d transparent transparent transparent;
 }
+a.top {
+	margin:.5rem auto;
+	display: block;
+	text-align: center;
+}
+a.top:before {
+	content: "\f106";
+	font-family: "FontAwesome";
+	font-size: 1.2rem;
+}
 
 /* Media */
 @media handheld, only screen and (max-width: 767px) {
@@ -962,6 +979,10 @@ h2.search-title {
 		padding-right: 0px;
 		float: none;
 		border:none;
+	}
+	aside.right-container {
+		border-top:1px solid lightgrey;
+		padding-top: 3rem
 	}
 	.wrapper {
 		width: 96%;
@@ -990,7 +1011,6 @@ h2.search-title {
 	#comment_form {
 		margin-bottom: 3rem;
 		padding: 1rem 1rem 3rem 1rem;
-		border-bottom: 1px solid #aaa;
 		clear: both;
 	}
 	.pageborder {
@@ -1020,8 +1040,8 @@ h2.search-title {
 		}
 		nav ul li a {
 			height:2rem;
-			font-size: 1.2rem;
-			line-height: 1.2rem;
+			font-size: 1rem;
+			line-height: 1rem;
 			background: #eee;
 			display: block;
 		}
