@@ -45,7 +45,7 @@
 
 			//Above 767px remove style attributes
 			$(window).resize(function(){
-				if(window.innerWidth > 767) {
+				if(window.innerWidth > 540) {
 					$("nav ul").removeAttr("style");
 				}
 			});

@@ -37,7 +37,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	background:#fbfbfb url(images/stripe.png);
+	background:#fbfbfb url(images/stripe.png) fixed;
 }
 
 .wrapper {
@@ -245,18 +245,19 @@ header.topfixed {
 	
 }
 nav {
-	border-bottom: 1px dotted #649c77;
 	margin-bottom: 3rem;
-	padding-bottom: .5rem;
 	margin-top: 2rem
 }
 	nav ul {
 		text-align: center;
 		list-style-type: none;
 		position: relative;
+		border-bottom: 1px dotted #649c77;
+		padding-bottom: .5rem
 	}
 	nav ul li{
 		display:inline-block;
+		
 	}
 	nav a, nav a:focus, nav a:visited, #hidden_menu {
 		font-family: "Raleway";
@@ -274,14 +275,18 @@ nav {
 		display: none;
 		position: absolute;
 		padding:0;
-		top:2rem;
+		top:1.5rem;
 		background:#fff;
-		border: 1px dotted #649c77;
+		border-top: 1px solid #649c77;
 		z-index: 9999999;
+		box-shadow: 1px 1px 1px #999;
+		border-bottom: none;
 	}
 	nav ul li ul li{
 		display: block;
 		margin:1rem 0;
+		text-align: center;
+		min-width: 110px
 	}
 	nav ul li:hover > ul {
 		display: inline;
@@ -526,6 +531,11 @@ div.alignleft {
 div.wp-caption img {
 	width: 100% !important;
 	height:auto !important;
+}
+
+/* Rezepteindex recipeindex */
+h2.recipeindex:first-child {
+	margin-top:0;
 }
 
 /* next/previous button */
@@ -968,8 +978,7 @@ a.top:before {
 
 /* Media */
 @media handheld, only screen and (max-width: 767px) {
-	.displaynone {display:none}
-	.displaymobile {display: block}
+
 	div.left-container, aside.right-container, .wrapper  {
 		width: 100%;
 		min-width: 0;
@@ -1022,49 +1031,7 @@ a.top:before {
 	a.more-link:hover {
 		color: black;
 	}
-	nav {
-		border:none;
-		line-height: 1.2rem;
-	}
-		nav ul li:first-child {
-			margin-top: .8rem;
-		}
-		nav ul li:last-child {
-			margin:0;
-		}
-		nav ul li {
-			padding:0;
-			margin-bottom: .5rem;
-			display: block;
-			text-align: center;
-		}
-		nav ul li a {
-			height:2rem;
-			font-size: 1rem;
-			line-height: 1rem;
-			background: #eee;
-			display: block;
-		}
-		/*ul ul*/
-		nav ul li ul{
-			display: block;
-			visibility: visible;
-			position:static;
-			padding-left:20px;
-			background:none;
-			border:none;
-			border-left:1px solid #649c77;;
-		}
-		nav ul li ul li {
-			display: block;
-			margin:0 0 .5rem 0;
-		}
-		nav ul li ul li:first-child {
-			margin-top: .5rem;
-		}
-		nav ul li:hover > ul {
-	   		visibility: visible;
-		}
+
 	.alignright, 
 	.alignleft {
 		width: 100% !important;
@@ -1110,6 +1077,53 @@ a.top:before {
 	span.smallcontent {
 		width: 100%;
 	}
+
+	.displaynone {display:none}
+	.displaymobile {display: block}
+	nav {
+		border:none;
+		line-height: 1.2rem;
+	}
+		nav ul li:first-child {
+			margin-top: .8rem;
+		}
+		nav ul li:last-child {
+			margin:0;
+		}
+		nav ul li {
+			padding:0;
+			margin-bottom: .5rem;
+			display: block;
+			text-align: center;
+		}
+		nav ul li a {
+			height:2rem;
+			font-size: 1rem;
+			line-height: 1rem;
+			background: #eee;
+			display: block;
+		}
+		/*ul ul*/
+		nav ul li ul{
+			display: block;
+			visibility: visible;
+			position:static;
+			padding-left:20px;
+			background:none;
+			border:none;
+			border-left:1px solid #649c77;
+			box-shadow: none;
+		}
+		nav ul li ul li {
+			display: block;
+			margin:0 0 .5rem 0;
+		}
+		nav ul li ul li:first-child {
+			margin-top: .5rem;
+		}
+		nav ul li:hover > ul {
+	   		visibility: visible;
+		}	
 }
 
 @media handheld, only screen and (max-width: 1030px) {
